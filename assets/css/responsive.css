@@ -106,4 +106,15 @@
         -moz-flex-basis:100% !important;
         -o-flex-basis:100% !important;
     }
+    .sec.timer:last-child {
+        margin-right: 0;
+    }
+    
+    .promo-timer .num {
+        font-size: 40px;
+    }
+    
+    .promo-timer .text {
+        font-size: 15px;
+    }
 }
