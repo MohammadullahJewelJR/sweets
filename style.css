@@ -1,0 +1,656 @@
+/* ===================== START HEADER SECTION ======= */
+.hero-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url('assets/img/bg3.png');
+    background-size:cover;
+    background-position:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 20px 5%;
+    margin: auto;
+    /* background-color: rgba(48, 216, 160, 0.432); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+header nav .logo{
+    font-size:30px;
+    color:#fff;
+    font-weight: 600;
+    font-style: italic;
+}
+header nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+header nav ul li a{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: block;
+    transition: 0.5s all ease;
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+    color: #ff0000;
+}
+.dropdown,.dropdown2{
+    position:relative;
+}
+.dropdown-menu{
+    position:absolute;
+    top: 100px;
+    width: 200px;
+    background-color: #000;
+    padding: 5px;
+    border-radius:8px;
+    -webkit-transition:0.5s all ease;
+    -moz-transition:0.5s all ease;
+    -o-transition:0.5s all ease;
+        transition:0.5s all ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+.dropdown-menu::after{
+    position:absolute;
+    content: '';
+    top: -20px;
+    left: 30px;
+    width:0;
+    height:0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    z-index: 100;
+}
+.dropdown:hover .dropdown-menu{
+    top: 40px;
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-menu li{
+    display: block;
+    margin: 15px 5px;
+}
+.dropdown-menu li a{
+    font-size:14px;
+    color: #fff;
+    font-weight: 400;
+}
+.dropdown-menu li a i{
+    float: right;
+}
+.sub-dropdown li{
+    margin: 10px 0;
+}
+.sub-dropdown{
+    position: absolute;
+    right: 0;
+    left: 105%;
+    top: 60%;
+    background: #000;
+    width: 120px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    -webkit-transition:0.5s all ease;
+    -moz-transition:0.5s all ease;
+    -o-transition:0.5s all ease;
+        transition:0.5s all ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.dropdown2:hover .sub-dropdown{
+    opacity: 1;
+    visibility: visible;
+}
+.hero-section .hero-text{
+    text-align: center;
+}
+.hero-section .hero-text h2{
+    font-size:50px;
+    color:#fff;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.hero-section .hero-text p{
+    color:#fff;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.hero-section .hero-text small{
+    font-size:14px;
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    font-weight: 600;
+}
+.open-btn,.close-btn{
+    display: none;
+}
+header nav.active{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #1b0404ab;
+    backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        -o-backdrop-filter: blur(10px);
+        -moz-backdrop-filter: blur(10px);
+    transition:0.3s all ease;
+        -webkit-transition:0.3s all ease;
+        -moz-transition:0.3s all ease;
+        -o-transition:0.3s all ease;
+    padding: 10px 5%;
+}
+/* ======================= END HEADER SECTION ======= */
+/* =================== START ROOMS SECTION ========== */
+.title{
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+.title h2{
+    position:relative;
+    font-size:40px;
+    font-weight: 400;
+    display: block;
+}
+.title h2:after{
+    position:absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    bottom: -7px;
+    left: 50%;
+    content: '';
+    transform: translateX(-50%);
+}
+
+.rooms-box{
+    margin: 30px 0;
+    overflow: hidden;
+}
+.rooms-box .our-rooms{
+    border-radius: 8px;
+}
+.rooms-box .our-rooms .img{
+    position: relative;
+    overflow: hidden;
+}
+.rooms-box .our-rooms:hover img{
+    transform: scale(1.1);
+    transition: 0.4s all ease;
+    -webkit-transition:0.4s all ease;
+    -moz-transition:0.4s all ease;
+    -o-transition:0.4s all ease;
+}
+.rooms-box .our-rooms:hover{
+    background-color: #f5f5f5be;
+    -webkit-transition:0.4s all ease;
+    -moz-transition:0.4s all ease;
+    -o-transition:0.4s all ease;
+    transition:0.4s all ease;
+    box-shadow: 0px 0px 5px #ccc;
+}
+.rooms-box .our-rooms .rooms-text{
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+.our-rooms .rooms-text h3{
+    font-size: 20px;
+    color:#000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+.our-rooms .rooms-text small{
+    font-size:15px;
+    color:#666666;
+    font-weight: 600;
+    padding: 8px 0;
+    display: block;
+}
+/* ===================== END ROOMS SECTION ======== */
+/* ======================== START ABOUT SECTION ========= */
+
+.about-section .video-img{
+    position: relative;
+}
+.about-section .video-img .v-img{
+    width: 90%;
+}
+.about-section .video-img .smallImg{
+    position: absolute;
+    width: 250px;
+    bottom: -15px;
+    right: 0px;
+    border: 8px solid #fff;
+    box-shadow: 0px 0px 2px #666666;
+}
+.about-section .about-text h2{
+    position:relative;
+    font-size:40px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.about-section .about-text h2:after{
+    position:absolute;
+    content:'';
+    width:100px;
+    height: 2px;
+    background-color: #666666;
+    bottom: -6px;
+    left: 0;
+}
+.about-section .about-text p{
+    font-size: 18px;
+    color: #000;
+    letter-spacing: 0.8px;
+    line-height: 30px;
+    margin: 16px 0;
+}
+.about-section .about-text a{
+    display: inline-block;
+    color:#ff0000;
+    font-size: 15px;
+    text-transform: capitalize;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+/* ======================== END ABOUT SECTION ========= */
+/* ================= START HOTEL SECTION =========== */
+.hotel-box{
+    padding: 40px 0;
+}
+.hotel-box .hotel-icon{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.hotel-box .hotel-icon i{
+    font-size:55px;
+    color:#eb6208;
+    margin: 20px 0;
+}
+.hotel-box .hotel-icon h3{
+    font-size: 25px;
+    font-weight: 400;
+    color:#000;
+}
+/* ================= END HOTEL SECTION =========== */
+/* ================ START DISCOUNT SECTION ======== */
+.discount-section{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("assets/img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp");
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height:100%;
+    max-height: 400px;
+    background-attachment: fixed;
+}
+.discount-section .discount-text h2{
+    font-size:35px;
+    color:#fff;
+    font-weight: 400;
+    padding: 10px 0;
+}
+.discount-section .discount-text a{
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #eb6208;
+    -webkit-transition:0.3s all ease;
+    -moz-transition:0.4s all ease;
+    -o-transition:0.4s all ease;
+    transition:0.4s all ease;
+    padding: 8px 10px;
+    display: inline-block;
+    background: #eb63083f;
+}
+.discount-section .discount-text a:hover{
+    background: #eb6208;
+}
+.discount-section .discount-text small{
+    font-size:15px;
+    color:#fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.promo-timer{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+.promo-timer .timer{
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.promo-timer .num{
+    font-size:45px;
+    color:#fff;
+    letter-spacing: 1.2px;
+}
+.promo-timer .text{
+    font-size:18px;
+    color:#fff;
+    text-transform: capitalize;
+    letter-spacing: 0.6px;
+}
+/* ================ END DISCOUNT SECTION ======== */
+/* ================= START GALLERY SECTION ======== */
+.gallery-img{
+    margin:80px 0;
+}
+.gallery-img .gl-img{
+    position:relative;
+    flex-basis: 24%;
+    max-height: 200px;
+    -webkit-transition:0.4s all ease;
+    -moz-transition:0.4s all ease;
+    -o-transition:0.4s all ease;
+    transition:0.4s all ease;
+}
+.gallery-img .gl-img img{
+    width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+.gallery-img .gl-img:hover{
+    opacity: 0.5;
+    cursor:zoom-in
+}
+/* ================= END GALLERY SECTION ======== */
+/* ======================= START UPCOMMING SECTION ================= */
+.upcomming-section .upcomming-box{
+    margin-top: 60px;
+}
+.upcomming-box .event-text {
+    padding: 20px 0;
+}
+.upcomming-box .event-text h3{
+    font-size:22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-bottom: 8px;
+}
+.upcomming-box .event-text h5{
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+.upcomming-box .event-text h5 a{
+    color: #ff0000;
+    display: inline-block;
+}
+.upcomming-box .event-text p{
+    padding-top: 25px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+/* ======================= END UPCOMMING SECTION ================= */
+/* =========================== START PEOPLE SECTION ============= */
+.people-box{
+    margin-top: 50px;
+    margin-bottom:4 0px;
+}
+.people-single-box{
+    display: flex;
+    -webkit-display:flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+.people-single-box img{
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+.people-single-box .single-box-text h2{
+    font-size: 22px;
+    text-transform:capitalize;
+    padding-bottom:5px;
+    font-weight:600;
+}
+.people-single-box .single-box-text p{
+    font-size:17px;
+    letter-spacing: 0.6px;
+    line-height: 25px;
+}
+/* =========================== END PEOPLE SECTION ============= */
+/* ====================== START FOOTER SECTION ========= */
+footer{
+    background-color: #000;
+}
+footer .footer-content h3{
+    font-size:22px;
+    font-weight:600;
+    color:#fff;
+    letter-spacing: 0.6px;
+    padding-bottom:20px;
+    text-align: left;
+    text-transform:capitalize;
+}
+footer .footer-content p{
+    color:#cac8c8;
+    font-size:17px;
+    letter-spacing:0.6px;
+    padding-bottom: 10px;
+}
+footer .footer-content > a{
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #ff0000;
+    border: 1px solid #ff0000;
+    border-radius:8px;
+    -webkit-transition:0.5s all ease;
+    -moz-transition:0.5s all ease;
+    -o-transition:0.5s all ease;
+    transition:0.5s all ease;
+    color:#fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 20px;
+}
+footer .footer-content ul li a{
+    display: block;
+    margin: 8px 0;
+    color:#cac8c8;
+    text-transform: capitalize;
+    font-size:17px;
+}
+footer .footer-content .social-icons a{
+    display: inline-block;
+    font-size:20px;
+    color:#fff;
+    transition:0.4s all ease;
+    -webkit-transition:0.4s all ease;
+    -moz-transition:0.4s all ease;
+    -o-transition:0.4s all ease;
+    margin: 10px;
+}
+footer .footer-content .social-icons a:hover{
+    color:#b34040;
+}
+/* ====================== END FOOTER SECTION ========= */
+
+
+
+
+/* ============================= START CUSTOM STYLE FOR STANDARD PAGE ===================== */
+.standard-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url('assets/img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp');
+}
+.pagination {
+    text-align: center;
+    margin: 0px auto 100px auto;
+}
+.pagination ul li{
+    display: inline-block;
+    margin: 10px;
+}
+.pagination ul li a{
+    font-size: 18px;
+    color:#ff0000;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius:50%;
+    -webkit-transition:0.5s all ease;
+    -moz-transition:0.5s all ease;
+    -o-transition:0.5s all ease;
+    transition: 0.5s all ease;
+}
+.pagination ul li a:hover,
+.pagination ul li a.active{
+    background-color: #ff0000;
+    color:#fff;
+}
+
+/* ============================= END CUSTOM STYLE FOR STANDARD PAGE ===================== */
+/* =========================== START CUSTOM STYLE FOR ABOUT SECTION ================= */
+.staff-img{
+    overflow: hidden;
+}
+.staff-img img{
+    -webkit-transition:0.4s all ease;
+    -moz-transition:0.4s all ease;
+    -o-transition:0.4s all ease;
+    transition:0.4s all ease;
+}
+.staff-img:hover img{
+    transform: scale(1.2);
+}
+.staff-text{
+    text-align: center;
+}
+.staff-text h3{
+    font-size: 20px;
+    color:#000;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.staff-text p{
+    font-size:17px;
+    font-weight:400;
+    color:#000;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.staff-text a{
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius:8px;
+    border:1px solid #ff0000;
+    color:#ff0000;
+    margin-top: 10px;
+}
+.staff-text a:hover i{
+    padding-left: 8px;
+    -webkit-transition:0.3s all ease;
+    -moz-transition:0.3s all ease;
+    -o-transition:0.3s all ease;
+    transition:0.3s all ease;
+}
+/* =========================== END CUSTOM STYLE FOR ABOUT SECTION ================= */
+/* ============================= START CUSTOM STYLE FOR CONTACT PAGE ========== */
+.contact-section{
+    margin: 30px 0;
+}
+.contact-section .form-box{
+    margin: 25px 0;
+}
+.contact-section .form-box label{
+    display: block;
+    font-size:17px;
+    font-weight: 600;
+    color: #666666;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact-section .form-box input,
+.contact-section .form-box textarea{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ff000041;
+    outline: none;
+    box-sizing: border-box;
+}
+.contact-section .form-box input:focus,
+.contact-section .form-box textarea:focus{
+    border: 1px solid #ff0000b2;
+}
+.contact-section input[type="submit"],
+.contact-section input[type="reset"] {
+    padding: 10px 20px;
+    margin: 10px 15px 0 0;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 19px;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-image:linear-gradient(rgba(204, 54, 54, 0.842),rgba(209, 36, 36, 0.842));
+    -webkit-transition:0.3s all ease;
+    -moz-transition:0.3s all ease;
+    -o-transition:0.3s all ease;
+    transition:0.3s all ease;
+    box-shadow: inset 0px 0px 3px 4px #8f0606b2;
+
+}
+.contact-section input[type="submit"]:hover,
+.contact-section input[type="reset"]:hover{
+    background-image:linear-gradient(rgba(231, 9, 9, 0.842),rgb(209, 3, 3));
+}
+
+.contact-info h3{
+    font-size:22px;
+    color:#000;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.contact-info h5{
+    margin-top: 20px;
+    font-size:16px;
+    color: #666666;
+    text-transform: capitalize;
+    padding-bottom: 8px;
+}
+.contact-info p{
+    font-size: 16px;
+    letter-spacing: 0.9px;
+    font-weight: 500;
+}
+.contact-info .red{
+    color: #b61010;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+}
+/* ========================== END CUSTOM STYLE FOR CONTACT PAGE =============== */
